@@ -1,0 +1,59 @@
+#grid-container{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 20px 0px;
+    font-family: "Kanit", serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+#grid-map{
+    display: flex;
+        width: 95%;
+        margin: auto;
+        margin-top: 20px;
+    
+}
+#details{
+    width: 100%;;
+    padding: 10px 10px;
+}
+.grid-egg{
+    width: 25px;
+}
+.flex-egg{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.grid-egg img{
+    width: 100%;
+  
+}
+.p-grid-img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.p-grid-img img{
+    width: 100%;
+    border-radius: 100px;
+    
+}
+
+#grid-stats{
+    width: 100%;
+    padding: 10px 10px;
+}
+#stats-flex{
+    display: flex;
+    justify-content: space-between;
+}
+#types{
+    border-radius: 5px;
+  
+    text-wrap: wrap;
+}
