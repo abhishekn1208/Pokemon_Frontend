@@ -31,11 +31,16 @@ const PokemonCard = () => {
   const fetchPokemonData = async () => {
     try {
       dispatch(fetchRequest());
+      const token = localStorage.getItem("token")
       const response = await axios.get(
-        `https://pokemon-backend-7.onrender.com/pokemon/getpokemon?page=${currentPage}&limit=5&sortQuery=${sortOption}`
-      );
+        `https://pokemon-backend-7-ngbx.onrender.com/pokemon/getpokemon?page=${currentPage}&limit=6&sortQuery=${sortOption}`,{
+          headers : {
+            Authorization : `Bearer ${token}`
+          }
+        });
+ 
       if (response.status === 201) {
-        console.log(response.data);
+ 
         dispatch(setPokemonData(response.data.pokemon));
         dispatch(setTotalPages(response.data.totalPages));
       } else if (response.status === 501) {
@@ -78,7 +83,7 @@ const PokemonCard = () => {
     dispatch(setFilterData(inputVal));
   };
 
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading) return (<><h1>Loading...</h1> <p>will take sometime to load...</p></>);
   return (
     <>
       <div className="sorting">
