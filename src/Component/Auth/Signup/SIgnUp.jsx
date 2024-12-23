@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './signup.css'
 
-const SIgnUp = () => {
+const Signup = () => {
     const usernameRef = useRef()
     const emailRef = useRef()
     const passwordRef = useRef()
@@ -52,4 +52,4 @@ const SIgnUp = () => {
   )
 }
 
-export default SIgnUp
+export default Signup
